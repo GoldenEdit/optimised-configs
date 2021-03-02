@@ -11,9 +11,9 @@ Configuration files, optimised and tested.
 
 ## What configs to use
 If your jar is:
-Paper: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml`
-Tuinity: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` `tuinity.yml`
-PurPur: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` `purpur.yml`
+Paper: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` <br />
+Tuinity: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` `tuinity.yml` <br />
+PurPur: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` `purpur.yml` <br />
 Airplane: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` `tuinity.yml`
 
 
