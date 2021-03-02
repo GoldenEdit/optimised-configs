@@ -1,0 +1,50 @@
+# This is the main configuration file for Bukkit.
+# As you can see, there's actually not that much to configure without any plugins.
+# For a reference for any variable inside this file, check out the Bukkit Wiki at
+# https://www.spigotmc.org/go/bukkit-yml
+# 
+# If you need help on this file, feel free to join us on irc or leave a message
+# on the forums asking for advice.
+# 
+# IRC: #spigot @ irc.spi.gt
+#    (If this means nothing to you, just go to https://www.spigotmc.org/go/irc )
+# Forums: https://www.spigotmc.org/
+# Bug tracker: https://www.spigotmc.org/go/bugs
+
+#Please remeber to edit this to your needs!
+#Disclamer - THESE WILL UPDATE! PLEASE REMERBER TO UPDATE YOUR CONFIGS TO THE LATEST VERSIONS AS THERE MAY BE ISSUES WITH OLDER VERSIONS! ALSO READ AND UNDERSTAND ALL OF THE VALUES SET, IF YOU NEED SUPPORT #support IN THE DISCORD! GoldenEdit#9999
+#  ______   .______   .___________. __  .___  ___.  __       _______. _______  _______       ______   ______   .__   __.  _______  __    _______ 
+# /  __  \  |   _  \  |           ||  | |   \/   | |  |     /       ||   ____||       \     /      | /  __  \  |  \ |  | |   ____||  |  /  _____|
+#|  |  |  | |  |_)  | `---|  |----`|  | |  \  /  | |  |    |   (----`|  |__   |  .--.  |   |  ,----'|  |  |  | |   \|  | |  |__   |  | |  |  __  
+#|  |  |  | |   ___/      |  |     |  | |  |\/|  | |  |     \   \    |   __|  |  |  |  |   |  |     |  |  |  | |  . `  | |   __|  |  | |  | |_ | 
+#|  `--'  | |  |          |  |     |  | |  |  |  | |  | .----)   |   |  |____ |  '--'  |   |  `----.|  `--'  | |  |\   | |  |     |  | |  |__| | 
+# \______/  | _|          |__|     |__| |__|  |__| |__| |_______/    |_______||_______/     \______| \______/  |__| \__| |__|     |__|  \______| 
+
+
+settings:
+  allow-end: true #Choose if you want the end dimension or not
+  warn-on-overload: true
+  permissions-file: permissions.yml
+  update-folder: update
+  plugin-profiling: false
+  connection-throttle: 500 #Amount of time before a player can join the server again after being kicked/trying to connected/disconnecting
+  query-plugins: true
+  deprecated-verbose: default
+  shutdown-message: §c§lServer shutting down...
+  minimum-api: none
+spawn-limits:
+  monsters: 14
+  animals: 3
+  water-animals: 0
+  water-ambient: 0
+  ambient: 0
+chunk-gc:
+  period-in-ticks: 400
+ticks-per:
+  animal-spawns: 3
+  monster-spawns: 3
+  water-spawns: 0
+  water-ambient-spawns: 0
+  ambient-spawns: 0
+  autosave: 6000
+aliases: now-in-commands.yml
