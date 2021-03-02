@@ -9,6 +9,15 @@
 # 
 # IRC: #spigot @ irc.spi.gt ( http://www.spigotmc.org/pages/irc/ )
 # Forums: http://www.spigotmc.org/
+#
+#Please remeber to edit this to your needs!
+#Disclamer - THESE WILL UPDATE! PLEASE REMERBER TO UPDATE YOUR CONFIGS TO THE LATEST VERSIONS AS THERE MAY BE ISSUES WITH OLDER VERSIONS! ALSO READ AND UNDERSTAND ALL OF THE VALUES SET, IF YOU NEED SUPPORT #support IN THE DISCORD! GoldenEdit#9999
+#  ______   .______   .___________. __  .___  ___.  __       _______. _______  _______       ______   ______   .__   __.  _______  __    _______ 
+# /  __  \  |   _  \  |           ||  | |   \/   | |  |     /       ||   ____||       \     /      | /  __  \  |  \ |  | |   ____||  |  /  _____|
+#|  |  |  | |  |_)  | `---|  |----`|  | |  \  /  | |  |    |   (----`|  |__   |  .--.  |   |  ,----'|  |  |  | |   \|  | |  |__   |  | |  |  __  
+#|  |  |  | |   ___/      |  |     |  | |  |\/|  | |  |     \   \    |   __|  |  |  |  |   |  |     |  |  |  | |  . `  | |   __|  |  | |  | |_ | 
+#|  `--'  | |  |          |  |     |  | |  |  |  | |  | .----)   |   |  |____ |  '--'  |   |  `----.|  `--'  | |  |\   | |  |     |  | |  |__| | 
+# \______/  | _|          |__|     |__| |__|  |__| |__| |_______/    |_______||_______/     \______| \______/  |__| \__| |__|     |__|  \______| 
 
 config-version: 12
 settings:
