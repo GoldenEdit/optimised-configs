@@ -14,7 +14,7 @@ If your jar is:
 Paper: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` <br />
 Tuinity: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` `tuinity.yml` <br />
 PurPur: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` `tuinity.yml` `purpur.yml` <br />
-Airplane: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` `tuinity.yml`
+Airplane: `bukkit.yml` `paper.yml` `server.properties` `spigot.yml` `tuinity.yml` `airplane.air`
 
 
 ## Contributing
