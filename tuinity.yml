@@ -1,18 +1,22 @@
 # Configuration file for Tuinity.
-#
-#Please remeber to edit this to your needs!
-#Disclamer - THESE WILL UPDATE! PLEASE REMERBER TO UPDATE YOUR CONFIGS TO THE LATEST VERSIONS AS THERE MAY BE ISSUES WITH OLDER VERSIONS! ALSO READ AND UNDERSTAND ALL OF THE VALUES SET, IF YOU NEED SUPPORT #support IN THE DISCORD! GoldenEdit#9999
-#  ______   .______   .___________. __  .___  ___.  __       _______. _______  _______       ______   ______   .__   __.  _______  __    _______ 
-# /  __  \  |   _  \  |           ||  | |   \/   | |  |     /       ||   ____||       \     /      | /  __  \  |  \ |  | |   ____||  |  /  _____|
-#|  |  |  | |  |_)  | `---|  |----`|  | |  \  /  | |  |    |   (----`|  |__   |  .--.  |   |  ,----'|  |  |  | |   \|  | |  |__   |  | |  |  __  
-#|  |  |  | |   ___/      |  |     |  | |  |\/|  | |  |     \   \    |   __|  |  |  |  |   |  |     |  |  |  | |  . `  | |   __|  |  | |  | |_ | 
-#|  `--'  | |  |          |  |     |  | |  |  |  | |  | .----)   |   |  |____ |  '--'  |   |  `----.|  `--'  | |  |\   | |  |     |  | |  |__| | 
-# \______/  | _|          |__|     |__| |__|  |__| |__| |_______/    |_______||_______/     \______| \______/  |__| \__| |__|     |__|  \______| 
 send-full-pos-for-hard-colliding-entities: true
-delay-chunkunloads-by: 5
-lag-compensate-block-breaking: true
 use-new-light-engine: true
+pistons-can-push-tile-entities: false
+lag-compensate-block-breaking: false
+delay-chunkunloads-by: 1
 config-version-please-do-not-modify-me: 2
+world-settings:
+  default:
+    spawn-limits:
+      water-ambient: -1
+      monsters: -1
+      animals: -1
+      water-animals: -1
+      ambient: -1
+  world: {}
+  world_nether: {}
+  world_the_end: {}
+  worldeditregentempworld: {}
 packet-limiter:
   kick-message: '&cSent too many packets'
   limits:
@@ -23,15 +27,11 @@ packet-limiter:
       interval: 4.0
       max-packet-rate: 5.0
       action: DROP
-world-settings:
-  default:
-    spawn-limits:
-      monsters: -1
-      animals: -1
-      water-ambient: -1
-      water-animals: -1
-      ambient: -1
-    worldgen:
-      seeds:
-        populator: default
-  world: {}
+player-chunks:
+  min-load-radius: 2
+  max-concurrent-sends: 5.0
+  max-concurrent-loads: -9.0
+  autoconfig-send-distance: true
+  enable-mc162253-workaround: false
+  target-chunk-send-rate: -25.0
+  enable-frustum-priority: false

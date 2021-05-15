@@ -9,30 +9,28 @@
 # 
 # IRC: #spigot @ irc.spi.gt ( http://www.spigotmc.org/pages/irc/ )
 # Forums: http://www.spigotmc.org/
-#
-#Please remeber to edit this to your needs!
-#Disclamer - THESE WILL UPDATE! PLEASE REMERBER TO UPDATE YOUR CONFIGS TO THE LATEST VERSIONS AS THERE MAY BE ISSUES WITH OLDER VERSIONS! ALSO READ AND UNDERSTAND ALL OF THE VALUES SET, IF YOU NEED SUPPORT #support IN THE DISCORD! GoldenEdit#9999
-#  ______   .______   .___________. __  .___  ___.  __       _______. _______  _______       ______   ______   .__   __.  _______  __    _______ 
-# /  __  \  |   _  \  |           ||  | |   \/   | |  |     /       ||   ____||       \     /      | /  __  \  |  \ |  | |   ____||  |  /  _____|
-#|  |  |  | |  |_)  | `---|  |----`|  | |  \  /  | |  |    |   (----`|  |__   |  .--.  |   |  ,----'|  |  |  | |   \|  | |  |__   |  | |  |  __  
-#|  |  |  | |   ___/      |  |     |  | |  |\/|  | |  |     \   \    |   __|  |  |  |  |   |  |     |  |  |  | |  . `  | |   __|  |  | |  | |_ | 
-#|  `--'  | |  |          |  |     |  | |  |  |  | |  | .----)   |   |  |____ |  '--'  |   |  `----.|  `--'  | |  |\   | |  |     |  | |  |__| | 
-# \______/  | _|          |__|     |__| |__|  |__| |__| |_______/    |_______||_______/     \______| \______/  |__| \__| |__|     |__|  \______| 
 
 config-version: 12
+messages:
+  whitelist: You are not whitelisted on this server!
+  unknown-command: Unknown command. Type "/help" for help.
+  server-full: The server is full! Donators can join the server when it is full!
+  outdated-client: Outdated client! Please use {0}
+  outdated-server: Outdated server! I'm still on {0}
+  restart: Server has restarting
 settings:
-  moved-wrongly-threshold: 0.0625
-  moved-too-quickly-multiplier: 10.0
-  save-user-cache-on-stop-only: true
-  log-villager-deaths: true
-  sample-count: 12
+  save-user-cache-on-stop-only: false
+  sample-count: 0
+  bungeecord: false
   player-shuffle: 0
   user-cache-size: 1000
+  moved-wrongly-threshold: 0.0625
+  moved-too-quickly-multiplier: 10.0
+  log-villager-deaths: true
   timeout-time: 60
-  restart-on-crash: true
+  restart-on-crash: trueF
   restart-script: ./start.sh
-  bungeecord: true
-  netty-threads: 8
+  netty-threads: 4
   debug: false
   attribute:
     maxHealth:
@@ -42,10 +40,9 @@ settings:
     attackDamage:
       max: 2048.0
 commands:
-  silent-commandblock-console: false
-  log: true
   spam-exclusions:
   - /skill
+  silent-commandblock-console: false
   replace-commands:
   - setblock
   - summon
@@ -53,15 +50,7 @@ commands:
   - tellraw
   tab-complete: 0
   send-namespaced: true
-players:
-  disable-saving: false
-messages:
-  whitelist: §cYou are not whitelisted on this server!
-  unknown-command: §cUnknown command.
-  server-full: §cServer is full!
-  outdated-client: §cOutdated client! Please use {0}
-  outdated-server: §cOutdated server! I'm still on {0}
-  restart: §c§lRestarting
+  log: true
 advancements:
   disable-saving: false
   disabled:
@@ -71,47 +60,41 @@ stats:
   forced-stats: {}
 world-settings:
   default:
+    seed-bastion: 88952103
+    seed-fortress: 15567854
+    seed-mansion: 45862193
+    seed-fossil: 75896123
+    seed-portal: 45862921
     verbose: true
-    item-despawn-rate: 3600
-    enable-zombie-pigmen-portal-spawns: true
-    view-distance: 2
-    wither-spawn-sound-radius: 0
+    mob-spawn-range: 2
     hopper-amount: 1
-    max-tnt-per-tick: 5
+    dragon-death-sound-radius: 0
+    seed-village: 98625012
+    seed-desert: 75980345
+    seed-igloo: 64257039
+    seed-jungle: 11570369
+    seed-swamp: 65470392
+    seed-monument: 12803956
+    seed-shipwreck: 95630255
+    seed-ocean: 75410256
+    seed-outpost: 90362514
+    seed-endcity: 95302645
+    seed-slime: 457757
+    max-tnt-per-tick: 100
+    view-distance: default
+    enable-zombie-pigmen-portal-spawns: true
+    item-despawn-rate: 6000
     arrow-despawn-rate: 300
     trident-despawn-rate: 1200
-    nerf-spawner-mobs: true
-    mob-spawn-range: 1
-    zombie-aggressive-towards-villager: true
-    hanging-tick-frequency: 100
-    dragon-death-sound-radius: 0
-    seed-village: 10387312
-    seed-desert: 14357617
-    seed-igloo: 14357618
-    seed-jungle: 14357619
-    seed-swamp: 14357620
-    seed-monument: 10387313
-    seed-shipwreck: 165745295
-    seed-ocean: 14357621
-    seed-outpost: 165745296
-    seed-endcity: 10387313
-    seed-slime: 987234911
-    seed-bastion: 30084232
-    seed-fortress: 30084232
-    seed-mansion: 10387319
-    seed-fossil: 14357921
-    seed-portal: 34222645
+    wither-spawn-sound-radius: 0
     end-portal-sound-radius: 0
+    hanging-tick-frequency: 100
+    zombie-aggressive-towards-villager: true
+    nerf-spawner-mobs: true
     max-entity-collisions: 2
-    entity-tracking-range:
-      players: 52
-      animals: 52
-      monsters: 52
-      misc: 52
-      other: 52
     merge-radius:
-      item: 4.0
       exp: 6.0
+      item: 4.0
     growth:
       cactus-modifier: 100
       cane-modifier: 100
@@ -130,12 +113,12 @@ world-settings:
       sweetberry-modifier: 100
       kelp-modifier: 100
     entity-activation-range:
-      animals: 6
-      monsters: 16
-      raiders: 48
+      animals: 16
+      monsters: 24
+      raiders: 32
       misc: 8
-      water: 12
-      villagers: 10
+      water: 8
+      villagers: 16
       flying-monsters: 32
       villagers-work-immunity-after: 100
       villagers-work-immunity-for: 20
@@ -144,8 +127,8 @@ world-settings:
       wake-up-inactive:
         animals-max-per-tick: 2
         animals-every: 1200
-        animals-for: 40
-        monsters-max-per-tick: 4
+        animals-for: 2
+        monsters-max-per-tick: 1
         monsters-every: 400
         monsters-for: 60
         villagers-max-per-tick: 1
@@ -154,6 +137,12 @@ world-settings:
         flying-monsters-max-per-tick: 1
         flying-monsters-every: 200
         flying-monsters-for: 60
+    entity-tracking-range:
+      players: 64
+      animals: 32
+      monsters: 48
+      misc: 32
+      other: 32
     ticks-per:
       hopper-transfer: 8
       hopper-check: 1
@@ -165,10 +154,12 @@ world-settings:
       swim-multiplier: 0.01
       sprint-multiplier: 0.1
       other-multiplier: 0.0
+    max-tick-time:
+      tile: 50
+      entity: 50
     squid-spawn-range:
       min: 45.0
-    max-tick-time:
-      tile: 1000
-      entity: 1000
   worldeditregentempworld:
     verbose: false
+players:
+  disable-saving: false
