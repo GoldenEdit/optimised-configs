@@ -1,45 +1,38 @@
 # Airplane Configuration
 # Read https://blog.airplane.gg/ to find out more about Airplane
 # Join our Discord to receive support & optimization help: https://discord.gg/3gtc45q
-[info]
-  version = "1.0"
-
-# Optimizes how entities act when
+info:
+  version: '1.0'
+# Optimizes projectile settings
+projectile:
+  # Controls how many chunks are allowed
+  # to be sync loaded by projectiles in a tick.
+  max-loads-per-tick: 10
+  # Controls how many chunks a projectile
+  # can load in its lifetime before it gets
+  # automatically removed.
+  max-loads-per-projectile: 10
+# Optimizes entity brains when
 # they're far away from the player
-[activation-range]
+dab:
+  enabled: true
   # This value determines how far away an entity has to be
   # from the player to start being effected by DEAR.
-  start-distance = 12
+  start-distance: 12
   # This value defines how often in ticks, the furthest entity
   # will get their pathfinders and behaviors ticked. 20 = 1s
-  max-tick-freq = 20
+  max-tick-freq: 20
   # This value defines how much distance modifies an entity's
   # tick frequency. freq = (distanceToPlayer^2) / (2^value)
   # If you want further away entities to tick less often, use 7.
   # If you want further away entities to tick more often, try 9.
-  activation-dist-mod = 8
-
-# A list of entities to use the dynamic activation range
-# to modify how often their behaviors are ticked
-[behavior-activation]
-  villager = true
-  piglin = true
-  hoglin = true
-
+  activation-dist-mod: 8
+  # A list of entities to ignore for activation
+  blacklisted-entities: []
 # Configures Flare, the built-in profiler
-[flare]
+flare:
   # Sets the server to use for profiles.
-  url = "https://flare.airplane.gg"
-
+  url: https://flare.airplane.gg
 # Options for connecting to Airplane's online utilities
-[web-services]
-  token = ""
-
-# Configures settings for generic entities
-[entities]
-  despawn-check-freq = 8
-
-# Settings for things that don't belong elsewhere
-[misc]
-  disable-method-profiler = true
-
+web-services:
+  token: ''
