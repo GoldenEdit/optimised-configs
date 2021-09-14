@@ -12,8 +12,10 @@
 
 use-display-name-in-quit-message: false
 verbose: false
-config-version: 20
+config-version: 22
 settings:
+  lag-compensate-block-breaking: true
+  send-full-pos-for-hard-colliding-entities: true
   fix-entity-position-desync: true
   track-plugin-scoreboards: false
   max-joins-per-tick: 3
@@ -63,6 +65,37 @@ settings:
   console:
     enable-brigadier-highlighting: true
     enable-brigadier-completions: true
+  use-display-name-in-quit-message: false
+  loggers:
+    deobfuscate-stacktraces: true
+  item-validation:
+    display-name: 8192
+    loc-name: 8192
+    lore-line: 8192
+    book:
+      title: 8192
+      author: 8192
+      page: 16384
+  chunk-loading:
+    min-load-radius: 2
+    max-concurrent-sends: 2
+    autoconfig-send-distance: true
+    target-player-chunk-send-rate: 100.0
+    global-max-chunk-send-rate: -1.0
+    enable-frustum-priority: false
+    global-max-chunk-load-rate: 300.0
+    player-max-concurrent-loads: 4.0
+    global-max-concurrent-loads: 500.0
+  packet-limiter:
+    kick-message: '&cSent too many packets'
+    limits:
+      all:
+        interval: 7.0
+        max-packet-rate: 500.0
+      PacketPlayInAutoRecipe:
+        interval: 4.0
+        max-packet-rate: 5.0
+        action: DROP
 messages:
   no-permission: '&cI''m sorry, but you do not have permission to perform this command.
     Please contact the server administrators if you believe that this is in error.'
@@ -72,6 +105,7 @@ messages:
     authentication-servers-down: ''
     connection-throttle: Connection throttled! Please wait before reconnecting.
 timings:
+  url: https://timings.pl3x.net/
   really-enabled: true
   enabled: true
   verbose: true
@@ -80,11 +114,21 @@ timings:
   - database
   - settings.bungeecord-addresses
   - settings.velocity-support.secret
+  - web-services.token
+  - settings.seed
+  - server-ip
   history-interval: 300
   history-length: 3600
   server-name: Unknown Server
 world-settings:
   default:
+    piglins-guard-chests: true
+    map-item-frame-cursor-update-interval: 10
+    allow-player-cramming-damage: false
+    seed-based-feature-search-loads-chunks: true
+    fix-items-merging-through-walls: false
+    show-sign-click-command-failure-msgs-to-player: falsef
+    map-item-frame-cursor-limit: 128
     allow-using-signs-inside-spawn-protection: false
     fix-wither-targeting-bug: false
     ender-dragons-death-always-places-dragon-egg: false
@@ -93,7 +137,7 @@ world-settings:
     allow-vehicle-collisions: true
     portal-search-vanilla-dimension-scaling: true
     max-leash-distance: 10.0
-    fix-climbing-bypassing-cramming-rule: false
+    fix-climbing-bypassing-cramming-rule: true
     should-remove-dragon: false
     zombies-target-turtle-eggs: true
     per-player-mob-spawns: true
@@ -201,7 +245,7 @@ world-settings:
       refresh-min: 12h
       refresh-max: 2d
     alt-item-despawn-rate:
-      enabled: false
+      enabled: true
       items:
         COBBLESTONE: 300
     hopper:
@@ -210,6 +254,7 @@ world-settings:
     viewdistances:
       no-tick-view-distance: 4
     anti-xray:
+      max-block-height: 64
       use-permission: false
       lava-obscures: false
       enabled: true
@@ -258,7 +303,32 @@ world-settings:
       - NORMAL
       - HARD
     entity-per-chunk-save-limit:
+      fireball: -1
+      small_fireball: -1
       experience_orb: 16
       snowball: 50
       ender_pearl: 16
       arrow: 16
+    mob-effects:
+      undead-immune-to-certain-effects: true
+      spiders-immune-to-poison-effect: true
+      immune-to-wither-effect:
+        wither: true
+        wither-skeleton: true
+    spawn-limits:
+      monsters: -1
+      animals: -1
+      water-animals: -1
+      water-ambient: -1
+      ambient: -1
+    tick-rates:
+      sensor:
+        villager:
+          secondarypoisensor: 40
+      behavior:
+        villager:
+          validatenearbypoi: -1
+    feature-seeds:
+      generate-random-seeds-for-all: false
+    unsupported-settings:
+      fix-invulnerable-end-crystal-exploit: true
