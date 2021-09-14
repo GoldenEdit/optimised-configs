@@ -19,6 +19,7 @@ messages:
   outdated-server: Outdated server! I'm still on {0}
   restart: Server has restarting
 settings:
+  log-named-deaths: true
   save-user-cache-on-stop-only: false
   sample-count: 0
   bungeecord: false
